@@ -34,4 +34,21 @@ HTMLEOF
   count=$((count + 1))
 done < <(find "$ROOT" -maxdepth 1 -name "*.md" -not -name ".*" -print0 | sort -z)
 
-echo "$count pages generated -> pages/"
+cat > "$ROOT/pages/index.html" <<HTMLEOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse</title>
+  <link rel="stylesheet" href="../lib/style.css" />
+  <style>#graph-panel { flex: 1; }</style>
+  <script src="../lib/graph.js"></script>
+</head>
+<body>
+<script src="../lib/browse.js"></script>
+</body>
+</html>
+HTMLEOF
+
+echo "$count note pages + index generated -> pages/"
