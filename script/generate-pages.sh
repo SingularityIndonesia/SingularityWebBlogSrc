@@ -22,6 +22,7 @@ while IFS= read -r -d '' filepath; do
   <title>$name</title>
   <link rel="stylesheet" href="../lib/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../lib/graph.js"></script>
 </head>
 <body>
 <script>window.PAGE = { name: "$name", file: "$filename", slug: "$slug" };</script>

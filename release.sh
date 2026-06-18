@@ -4,6 +4,9 @@ set -e
 echo "==> Indexing notes..."
 bash "$(dirname "$0")/script/indexing.sh"
 
+echo "==> Generating graph..."
+bash "$(dirname "$0")/script/generate-graph.sh"
+
 echo "==> Generating pages..."
 bash "$(dirname "$0")/script/generate-pages.sh"
 
