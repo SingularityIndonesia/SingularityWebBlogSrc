@@ -8,7 +8,7 @@ cat > "$ROOT/index.html" <<HTMLEOF
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=pages/welcome.html" />
+  <meta http-equiv="refresh" content="0; url=pages/index.html" />
 </head>
 <body></body>
 </html>
